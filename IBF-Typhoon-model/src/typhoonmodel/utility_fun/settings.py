@@ -8,8 +8,7 @@ import shutil
 # 1. Try to load secrets from Azure key vault (i.e. when running through Logic App) if user has access
 try:
     from azure.identity import DefaultAzureCredential
-    from azure.keyvault.secrets import SecretClient
-    
+    from azure.keyvault.secrets import SecretClient   
     az_credential = DefaultAzureCredential(exclude_shared_token_cache_credential=True)
     secret_client = SecretClient(vault_url='https://ibf-flood-keys.vault.azure.net', credential=az_credential)
     
@@ -113,7 +112,9 @@ High_resoluation_only_Switch=False
 
 
 typhoon_event_name=None
+
 ECMWF_CORRECTION_FACTOR=1
+
 ECMWF_LATENCY_LEADTIME_CORRECTION=10 
 longtiude_limit_leadtime=120 # if track pass this point consider it has made landfall 
 
