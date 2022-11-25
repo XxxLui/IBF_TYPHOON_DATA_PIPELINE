@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2       
       - name: Log into registry
-        uses: docker/login-action@v1.01
+        uses: docker/login-action@v1
         with:
           registry: ${{ secrets.ACR_ENDPOINT_TRAINING }}
           username: ${{ secrets.ACR_USERNAME_TRAINING }}
@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.ACR_ENDPOINT_TRAINING }}/${{ env.IMAGE_NAME }}:v1.01
+          tags: ${{ secrets.ACR_ENDPOINT_TRAINING }}/${{ env.IMAGE_NAME }}:v2
