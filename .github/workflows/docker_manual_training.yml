@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.ACR_ENDPOINT_TRAINING }}/${{ env.IMAGE_NAME }}:v1
+          tags: ${{ secrets.ACR_ENDPOINT_TRAINING }}/${{ env.IMAGE_NAME }}:v1.01
